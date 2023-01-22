@@ -1,173 +1,173 @@
 /* sass */
 /*variables*/
 .header-conteiner {
-    display: flex;
-    background-color: rgb(198, 237, 198);
-    margin: 20px;
-    padding: 20px;
-    font-size: 0%;
-    display: flex;
-    justify-content: left;
-    align-content: left;
-    justify-content: space-around;
-  }
-  
-  /*variables*/
-  .col {
-    display: flexbox;
-    text-align: center;
-    justify-content: center;
-    justify-content: space-between;
-  }
-  
-  .conteiner {
-    display: flex;
-    margin: 10px;
-    padding: 20px;
-   
-  }
-  
-  .main-conteiner {
-    display: inline-flexbox;
-    background-color: rgb(216, 231, 152);
-    justify-content: space-around;
-    justify-content: center;
-    justify-content: space-around;
-    justify-content: space-between;
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .presentationimg {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    padding: 20px;
-    align-self: center;
-  }
-  
-  .main-conteiner-sn {
-    text-align: center;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    background-color: rgb(225, 237, 177);
-    margin: 10px;
-    border: 20px;
-    padding: 20px;
-  }
-  
-  .body {
-    align-content: center;
-    display: flex;
-  }
-  
-  footer {
-    text-align: center;
-    text-size-adjust: 10px;
-    background-color: rgb(198, 237, 198);
-    margin: 10px;
-    padding: auto;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    margin-left: 5px;
-    margin-right: 5px;
-    justify-content: center;
-    align-content: flex-start;
-  }
-  
-  .h1 {
-    display: flex;
-    color: rgb(14, 40, 45);
-    text-align: center;
-    font-style: oblique;
-    font-size: x-large;
-    background-color: rgb(193, 231, 193);
-    padding: 100px;
-    margin: 50px;
-  }
-  
-  h2 {
-    color: rgb(139, 112, 164);
-    text-align: center;
-    justify-content: center;
-    text-justify: auto;
-    height: 0, 5px;
-  }
-  
-  h3 {
-    color: rgb(149, 111, 167);
-    font-size: medium;
-    font-weight: 300;
-  }
-  
-  h4 {
-    color: rgb(14, 40, 45);
-    text-align: center;
-    text-decoration-line: none;
-  }
-  
-  p {
-    color: rgb(15, 107, 107);
-    font-style: italic;
-    font-weight: bold;
-    font-size: 12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    line-height: 1;
-    text-decoration-style: none;
-  }
-  
-  
-  
-  .ul {
-    list-style: disc;
-    text-align: left;
-    color: rgb(67, 163, 163);
-  }
-  
-  .text {
-    text-align: center;
-    justify-content: center;
-  }
-  
-  ol {
-    list-style-position: initial;
-    text-align: center;
-    color: rgb(15, 107, 107);
-  }
-  
-  .li-capilar {
-    display: -moz-grid-line;
-  }
-  
-  li {
-    color: rgb(212, 141, 223);
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: start;
-  }
-  
-  /*google fonts*/
-  /*variables*/
-  .imagenes {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    justify-content: space-around;
-    padding: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  
-  /*# sourceMappingURL=style.css.map */
+  display: flex;
+  background-color: rgb(198, 237, 198);
+  margin: 20px;
+  padding: 20px;
+  font-size: 0%;
+  display: flex;
+  justify-content: left;
+  align-content: left;
+  justify-content: space-around;
+}
+
+/*variables*/
+.col {
+  display: flexbox;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.conteiner {
+  display: flex;
+  margin: 10px;
+  padding: 20px;
+
+}
+
+.main-conteiner {
+  display: inline-flexbox;
+  background-color: rgb(216, 231, 152);
+  justify-content: space-around;
+  justify-content: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+}
+
+.presentationimg {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  align-self: center;
+}
+
+.main-conteiner-sn {
+  text-align: center;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgb(225, 237, 177);
+  margin: 10px;
+  border: 20px;
+  padding: 20px;
+}
+
+.body {
+  align-content: center;
+  display: flex;
+}
+
+footer {
+  text-align: center;
+  text-size-adjust: 10px;
+  background-color: rgb(198, 237, 198);
+  margin: 10px;
+  padding: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.h1 {
+  display: flex;
+  color: rgb(14, 40, 45);
+  text-align: center;
+  font-style: oblique;
+  font-size: x-large;
+  background-color: rgb(193, 231, 193);
+  padding: 100px;
+  margin: 50px;
+}
+
+h2 {
+  color: rgb(139, 112, 164);
+  text-align: center;
+  justify-content: center;
+  text-justify: auto;
+  height: 0, 5px;
+}
+
+h3 {
+  color: rgb(149, 111, 167);
+  font-size: medium;
+  font-weight: 300;
+}
+
+h4 {
+  color: rgb(14, 40, 45);
+  text-align: center;
+  text-decoration-line: none;
+}
+
+p {
+  color: rgb(15, 107, 107);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  line-height: 1;
+  text-decoration-style: none;
+}
+
+
+
+.ul {
+  list-style: disc;
+  text-align: left;
+  color: rgb(67, 163, 163);
+}
+
+.text {
+  text-align: center;
+  justify-content: center;
+}
+
+ol {
+  list-style-position: initial;
+  text-align: center;
+  color: rgb(15, 107, 107);
+}
+
+.li-capilar {
+  display: -moz-grid-line;
+}
+
+li {
+  color: rgb(212, 141, 223);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: start;
+}
+
+/*google fonts*/
+/*variables*/
+.imagenes {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*# sourceMappingURL=style.css.map */
