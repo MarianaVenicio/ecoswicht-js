@@ -87,7 +87,7 @@ function anyadirProductoAlCarrito(evento) {
     renderizarCarrito();
     // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
-    
+
     Toastify({
         text: "Producto agregado al carrito",
         className: "info",
@@ -221,4 +221,5 @@ Swal.fire({
         )
     }
 })
+
 
