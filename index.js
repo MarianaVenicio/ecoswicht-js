@@ -188,9 +188,28 @@
             // Eventos
             DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
+
+
+           
             // Inicio
             cargarCarritoDeLocalStorage();
             renderizarProductos();
             renderizarCarrito();
     
-      
+            Swal.fire({
+                title: 'bienvenido',
+                text: "Te importa el PLANETA?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Siii!!, soy Ecofriendly!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    ' ya eres Eco!',
+                    ' que tengas una buena compra, a TI te deseamos lo mejor HERMOSO SER HUMANO .',
+                    'success'
+                  )
+                }
+              })
