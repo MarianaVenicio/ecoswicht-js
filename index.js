@@ -24,8 +24,6 @@ const baseDeDatos = [
         precio: 1300,
         imagen: 'facial/crema-facial-reafirmante.jpg'
     }
-
-
 ];
 
 let carrito = [];
@@ -34,13 +32,10 @@ const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+const DOMbotoncomprar = document.querySelector('#boton-comprar');
 const miLocalStorage = window.localStorage;
 
 // Funciones
-
-/**
-* Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-*/
 function renderizarProductos() {
     baseDeDatos.forEach((info) => {
         // Estructura
@@ -76,17 +71,11 @@ function renderizarProductos() {
         DOMitems.appendChild(miNodo);
     });
 }
-
-/**
-* Evento para añadir un producto al carrito de la compra
-*/
 function anyadirProductoAlCarrito(evento) {
     
     carrito.push(evento.target.getAttribute('marcador'))
-    // Actualizamos el carrito 
     renderizarCarrito();
-    // Actualizamos el LocalStorage
-    guardarCarritoEnLocalStorage();
+   guardarCarritoEnLocalStorage();
 
     Toastify({
         text: "Producto agregado al carrito",
@@ -96,10 +85,6 @@ function anyadirProductoAlCarrito(evento) {
         }
       }).showToast(); 
 }
-
-/**
-* Dibuja todos los productos guardados en el carrito
-*/
 function renderizarCarrito() {
     // Vaciamos todo el html
     DOMcarrito.textContent = '';
@@ -128,7 +113,6 @@ function renderizarCarrito() {
         miBoton.style.marginLeft = '1rem';
         miBoton.dataset.item = item;
         miBoton.addEventListener('click', borrarItemCarrito);
-        // Mezclamos nodos
         miNodo.appendChild(miBoton);
         DOMcarrito.appendChild(miNodo);
     });
@@ -137,27 +121,20 @@ function renderizarCarrito() {
 }
 
 /**
-* Evento para borrar un elemento del carrito
+* Evento para borrar un elemento 
 */
 function borrarItemCarrito(evento) {
-    // Obtenemos el producto ID que hay en el boton pulsado
-    const id = evento.target.dataset.item;
-    // Borramos todos los productos
-    carrito = carrito.filter((carritoId) => {
+  const id = evento.target.dataset.item;
+   carrito = carrito.filter((carritoId) => {
         return carritoId !== id;
     });
-    // volvemos a renderizar
-    renderizarCarrito();
-    // Actualizamos el LocalStorage
-    guardarCarritoEnLocalStorage();
+   renderizarCarrito();
+   guardarCarritoEnLocalStorage();
 
 }
 
-/**
- * Calcula el precio total teniendo en cuenta los productos repetidos
- */
 function calcularTotal() {
-    // Recorremos el array del carrito 
+    // Recorremos el array 
     return carrito.reduce((total, item) => {
         // De cada elemento obtenemos su precio
         const miItem = baseDeDatos.filter((itemBaseDatos) => {
@@ -174,10 +151,8 @@ function calcularTotal() {
 function vaciarCarrito() {
     // Limpiamos los productos guardados
     carrito = [];
-    // Renderizamos los cambios
-    renderizarCarrito();
-    // Borra LocalStorage
-    localStorage.clear();
+   renderizarCarrito();
+  localStorage.clear();
 
 }
 
@@ -186,19 +161,12 @@ function guardarCarritoEnLocalStorage() {
 }
 
 function cargarCarritoDeLocalStorage() {
-    // ¿Existe un carrito previo guardado en LocalStorage?
-    if (miLocalStorage.getItem('carrito') !== null) {
-        // Carga la información
-        carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+   if (miLocalStorage.getItem('carrito') !== null) {
+       carrito = JSON.parse(miLocalStorage.getItem('carrito'));
     }
 }
-
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-
-
-
-
 // Inicio
 cargarCarritoDeLocalStorage();
 renderizarProductos();
@@ -216,10 +184,37 @@ Swal.fire({
     if (result.isConfirmed) {
         Swal.fire(
             ' ya eres Eco! Que bueno!!',
-            ' Que tengas una buena compra, a TI te deseamos lo mejor HERMOSO SER HUMANO .',
+            ' Que tengas una buena compra, a TI te deseamos lo mejor, HERMOSO SER HUMANO .',
             'success'
         )
     }
 })
 
+//fetch(url, config)
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then (response => response.json())
+.then( data => console.log (data))
+.catch(error => console.log(error));
 
+
+fetch('https://jsonplaceholder.typicode.com/posts',{
+    method: 'post',
+    body: JSON.stringify ({
+        title: "probando",
+        body: "nuestra primera publicacion",
+    userId: 1,
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },  
+})
+.then (response => response.json())
+.then( data => console.log (data))
+.catch(error => console.log(error));
+
+const lista = document.getElementById("lista");
+fetch("data.JSON")
+.then(response => response.json())
+.then( data => {data.foreach (producto)} )
+.catch(error => console.log(error));
+traerproductos();
