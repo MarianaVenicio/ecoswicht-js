@@ -217,4 +217,10 @@ fetch("data.JSON")
 .then(response => response.json())
 .then( data => {data.foreach (producto)} )
 .catch(error => console.log(error));
+
+const traerproductos =async() => {
+   const response= await fetch('https://jsonplaceholder.typicode.com/posts');
+   const data= await response.JSON();
+   console.log(data.results);
+}
 traerproductos();
